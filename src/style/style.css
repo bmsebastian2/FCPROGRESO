@@ -1,0 +1,164 @@
+body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Noto Sans JP', sans-serif;
+}
+main{
+   min-height: 100vh;
+   /* background: linear-gradient(to right top,#65dfc9,#6cdbeb); */
+   background-image: url('./FONDO.jpg');
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+#textClub{
+   font-size: 1rem;
+   font-weight: bold;
+   color: red;
+}
+.encabezadoList{
+   width: 90%;
+   background: rgba(50,58,64);
+   -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 19px 7px 15px -1px rgba(0,0,0,0.12); 
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 19px 7px 15px -1px rgba(0,0,0,0.12);
+
+}
+#h1ListJugadores{
+   color: white;
+   font-size: 2rem;
+   
+   font-family: 'Shadows Into Light', cursive;
+}
+#jugadores{
+   font-family: 'Montserrat', sans-serif;
+   
+}
+.glass{
+   background: rgb(255, 255, 255);
+   min-height: 80vh;
+   width: 60%;
+   background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3) );
+   border-radius: 2rem;
+   z-index: 3;
+   backdrop-filter: blur(2rem);
+   display: flex;
+
+}
+.circle1, .circle2{
+   background: white; 
+   background: linear-gradient(to right bottom,rgba(255,255,255,0.8),rgba(255,255,255,0.3) );  
+   height: 12rem;
+   width: 12rem;
+   position: absolute;
+   border-radius: 50%;
+   z-index: 2; 
+  
+}
+.circle1{
+top:10%;
+left: 15%;
+
+
+}
+.circle2{
+bottom: 10%;
+right: 15%;
+height: 15rem;
+width: 15rem; 
+
+}
+
+.dashboard{
+  
+}
+
+.form{
+   flex: 1;
+}
+.a{
+   border:1px solid red;
+}
+#logo{
+   /* width: 30%;
+   height: 30%; */
+}
+#logoPelota{
+   /* width: 30%;
+   height: 30%; */
+}
+.list{
+   flex: 2;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.containerForm{
+   flex:1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   text-align: center;
+   background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3) );
+   border-radius: 2rem;
+  
+   
+  
+}
+#cardJugadores{
+   
+
+}
+.imagenListCard{
+   width: 3rem;
+   height: 3rem;
+
+}
+
+
+@media only screen and (max-width: 600px) {
+   .circle1, .circle2{
+      height: 5rem;
+      width: 5rem;
+   }
+   .circle1{
+      top:3%;
+      left: 3%;
+   }
+   .circle2{
+      bottom: 3%;
+      right: 3%; 
+   }
+   .glass{
+      min-height: 85vh;
+      width: 90%;
+   }
+   .glass{
+      flex-direction: column;
+   }
+ }
+
+ @media only screen and (min-width: 768px) and (max-width: 1024px) {
+   .circle1, .circle2{
+      height: 8rem;
+      width: 8rem;
+   }
+   .circle1{
+      top:3%;
+      left: 10%;
+   }
+   .circle2{
+      top: 50%;
+      right: 15%; 
+   }
+   .glass{
+      margin-bottom: 25vh;
+      height: 65px;
+   }
+   .dashboard{
+      flex-direction: column;
+   }
+   
+ }
