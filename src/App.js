@@ -36,9 +36,7 @@ function App() {
                        
                             <List 
                               listUsuarios = {listUsuarios}
-                              />                        
-                
-                
+                              />                                                        
 
            </section>       
 

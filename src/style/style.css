@@ -21,8 +21,7 @@ main{
 .encabezadoList{
    width: 90%;
    background: rgba(50,58,64);
-   -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 19px 7px 15px -1px rgba(0,0,0,0.12); 
-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 19px 7px 15px -1px rgba(0,0,0,0.12);
+  
 
 }
 #h1ListJugadores{
@@ -42,8 +41,10 @@ box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px
    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3) );
    border-radius: 2rem;
    z-index: 3;
-   backdrop-filter: blur(2rem);
+   backdrop-filter: blur(1.5rem);
    display: flex;
+
+   
 
 }
 .circle1, .circle2{
@@ -54,6 +55,8 @@ box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px
    position: absolute;
    border-radius: 50%;
    z-index: 2; 
+   -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 19px 7px 15px -1px rgba(0,0,0,0.12); 
+   box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 19px 7px 15px -1px rgba(0,0,0,0.12);
   
 }
 .circle1{
@@ -107,15 +110,7 @@ width: 15rem;
    
   
 }
-#cardJugadores{
-   
 
-}
-.imagenListCard{
-   width: 3rem;
-   height: 3rem;
-
-}
 
 
 @media only screen and (max-width: 600px) {
@@ -138,6 +133,7 @@ width: 15rem;
    .glass{
       flex-direction: column;
    }
+   
  }
 
  @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -160,5 +156,6 @@ width: 15rem;
    .dashboard{
       flex-direction: column;
    }
+   
    
  }
