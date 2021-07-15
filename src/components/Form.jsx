@@ -4,7 +4,7 @@ import FormInput from './FormInput';
 
 
 
-const Form = ({agregarUsuario}) => {
+const Form = ({agregarUsuario,stateBoton,editarstateBoton}) => {
     return (
         <div className="containerForm ">
             
@@ -19,6 +19,8 @@ const Form = ({agregarUsuario}) => {
             <div className=" ">
                     <FormInput 
                         agregarUsuario = {agregarUsuario}
+                        stateBoton = {stateBoton}
+                        editarstateBoton = {editarstateBoton}
                     />
             </div>
                     

@@ -8,6 +8,7 @@ import List from "./components/List";
 function App() {
 
   const [listUsuarios, setlistUsuarios] = useState([]);
+  const [stateBoton, setstateBoton] = useState(false);
 
   const buscarUsuario = () => {
 
@@ -22,6 +23,11 @@ function App() {
   const editarUsuario = () =>{
 
   }
+  const editarstateBoton = () =>{
+    setstateBoton(!stateBoton);
+  
+
+  }
 
   return (
     <div>
@@ -32,10 +38,13 @@ function App() {
 
                             <Form 
                               agregarUsuario = {agregarUsuario}
+                              stateBoton = {stateBoton}
+                              editarstateBoton = {editarstateBoton}
                               />                    
                        
                             <List 
-                              listUsuarios = {listUsuarios}
+                              listUsuarios = {listUsuarios} 
+                              editarstateBoton={editarstateBoton}
                               />                                                        
 
            </section>       

@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
 
-const List = ({listUsuarios}) => {
+const List = ({listUsuarios,editarstateBoton}) => {
     return (
         <div className="list">
            
@@ -12,7 +12,12 @@ const List = ({listUsuarios}) => {
 
            
           
-                {((listUsuarios.length>0))?<Card listUsuarios={listUsuarios}/>:<p>No estisten registros....</p>}     
+                {((listUsuarios.length>0))?
+                    <Card 
+                        listUsuarios={listUsuarios}
+                        editarstateBoton = {editarstateBoton}
+                    />
+                    :<p>No estisten registros....</p>}     
            </div>
         
        
