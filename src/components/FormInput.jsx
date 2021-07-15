@@ -1,9 +1,12 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 
+
 const FormInput = ({agregarUsuario,stateBoton,editarstateBoton}) => {
 
     const { register, handleSubmit, clearErrors, watch, formState: { errors } } = useForm();
+
+ 
     
     const onSubmit = (data,e) => {
         agregarUsuario(data);
@@ -31,34 +34,35 @@ const FormInput = ({agregarUsuario,stateBoton,editarstateBoton}) => {
 
     }         
     
-
+   
     return (
         <div>
+           
              <form action="" onSubmit = {handleSubmit(onSubmit)}>
                     <input  
-                    className = "form-control  text-center"
-                    type="text"
-                    placeholder="Ingrese Nombre" 
-                    name = "nombre"
-                    {...register('nombre', {required : true})}
-                    ref={input => input && input.focus()}
+                        className = "form-control  text-center"
+                        type="text"
+                        placeholder="Ingrese Nombre" 
+                        name = "nombre"
+                        {...register('nombre', {required : true})}
+                        ref={input => input && input.focus()}
                     />
                     {errors.nombre && <span>El nombre es requerido</span>}
                     <input  
-                    className=  "form-control mt-4 text-center"
-                     type="text"
-                     placeholder="Ingrese Apellido" 
-                     name = "apellido"
+                        className=  "form-control mt-4 text-center"
+                        type="text"
+                        placeholder="Ingrese Apellido" 
+                        name = "apellido"
                      {...register('apellido', {required : true})}
                      />
                      {errors.apellido && <span>El apellido es requerido</span>}
                     <input  
-                    className = "form-control mt-4 text-center"
-                    type="text"
-                    placeholder="Ingrese Usuario" 
-                    name = ""
+                        className = "form-control mt-4 text-center"
+                        type="text"
+                        placeholder="Ingrese Usuario" 
+                        name = ""
                     {...register('usuario')}
-                    />
+                    />             
                     
 
                     <div className="my-4 ">

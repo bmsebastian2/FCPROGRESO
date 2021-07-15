@@ -1,11 +1,18 @@
 // import logo from './logo.svg';
 // import './App.css';
+import { nanoid } from 'nanoid';
 import React,{useState} from 'react';
 import Form from "./components/Form";
 import List from "./components/List";
 
-
 function App() {
+
+//  ID PARA EL KEY RANDOM
+     const createNewTodo = (text) => ({
+      completed: false,
+      id: nanoid(),
+      text
+    });
 
   const [listUsuarios, setlistUsuarios] = useState([]);
   const [stateBoton, setstateBoton] = useState(false);
@@ -13,10 +20,14 @@ function App() {
   const buscarUsuario = () => {
 
   }
-  const eliminarUsuario = () => {
+  const eliminarUsuario = (e) => {
+    const lisNew = listUsuarios.filter(a=>a.id!=e.target.id);
+    setlistUsuarios(lisNew);
+    
 
   }
   const agregarUsuario = (data) => {
+    data.id = createNewTodo().id;
     setlistUsuarios([...listUsuarios,data]);
     
   }
@@ -26,7 +37,6 @@ function App() {
   const editarstateBoton = () =>{
     setstateBoton(!stateBoton);
   
-
   }
 
   return (
@@ -45,6 +55,7 @@ function App() {
                             <List 
                               listUsuarios = {listUsuarios} 
                               editarstateBoton={editarstateBoton}
+                              eliminarUsuario = {eliminarUsuario}
                               />                                                        
 
            </section>       
