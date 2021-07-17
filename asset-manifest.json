@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/FCPROGRESO/static/css/main.e430361f.chunk.css",
+    "main.js": "/FCPROGRESO/static/js/main.b16c0538.chunk.js",
+    "main.js.map": "/FCPROGRESO/static/js/main.b16c0538.chunk.js.map",
+    "runtime-main.js": "/FCPROGRESO/static/js/runtime-main.26d80069.js",
+    "runtime-main.js.map": "/FCPROGRESO/static/js/runtime-main.26d80069.js.map",
+    "static/js/2.03d836ee.chunk.js": "/FCPROGRESO/static/js/2.03d836ee.chunk.js",
+    "static/js/2.03d836ee.chunk.js.map": "/FCPROGRESO/static/js/2.03d836ee.chunk.js.map",
+    "index.html": "/FCPROGRESO/index.html",
+    "static/css/main.e430361f.chunk.css.map": "/FCPROGRESO/static/css/main.e430361f.chunk.css.map",
+    "static/js/2.03d836ee.chunk.js.LICENSE.txt": "/FCPROGRESO/static/js/2.03d836ee.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/FCPROGRESO/static/media/FONDO.00b5e960.jpg",
+    "static/media/edit-solid.4ffe848a.svg": "/FCPROGRESO/static/media/edit-solid.4ffe848a.svg",
+    "static/media/progreso.a368abe2.png": "/FCPROGRESO/static/media/progreso.a368abe2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26d80069.js",
+    "static/js/2.03d836ee.chunk.js",
+    "static/css/main.e430361f.chunk.css",
+    "static/js/main.b16c0538.chunk.js"
+  ]
+}
