@@ -1,25 +1,15 @@
 import React from 'react'
-// import { nanoid } from 'nanoid';
+
 
 
 const Card = ({listUsuarios,editarstateBoton,eliminarUsuario}) => {
-//     // ID PARA EL KEY RANDOM
-//     const createNewTodo = (text) => ({
-//      completed: false,
-//      id: nanoid(),
-//      text
-//    });
-  
 
     return (
-
         
         <div className="mt-2 w-100 px-3 ">
              
             {
-                listUsuarios.map( (a) => 
-
-                
+                listUsuarios.map( (a) =>                 
                     
                 <div key={a.id} className="alert alert-warning d-flex flex-sm-row flex-column justify-content-between" role="alert"  >
                    
@@ -35,9 +25,9 @@ const Card = ({listUsuarios,editarstateBoton,eliminarUsuario}) => {
                                 id={a.id} 
                                 type="button" 
                                 className="btn btn-outline-secondary"
-                                onClick={()=>editarstateBoton()}
+                                onClick={(e)=>editarstateBoton(e)}
                                 >
-                                <i id={a.id} className="fas fa-user-edit"  onClick={()=>editarstateBoton()}></i>
+                                <i id={a.id} className="fas fa-user-edit"  onClick={(e)=>editarstateBoton(e)}></i>
                             </button>
                             <button 
                                 id={a.id}

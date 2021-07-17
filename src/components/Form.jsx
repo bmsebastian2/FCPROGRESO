@@ -3,8 +3,7 @@ import img from '../style/Imagen';
 import FormInput from './FormInput';
 
 
-
-const Form = ({agregarUsuario,stateBoton,editarstateBoton}) => {
+const Form = ({agregarUsuario,stateBoton,editarstateBoton,objeto}) => {
     return (
         <div className="containerForm ">
             
@@ -21,6 +20,7 @@ const Form = ({agregarUsuario,stateBoton,editarstateBoton}) => {
                         agregarUsuario = {agregarUsuario}
                         stateBoton = {stateBoton}
                         editarstateBoton = {editarstateBoton}
+                        objeto = {objeto}
                     />
             </div>
                     

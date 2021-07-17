@@ -152,6 +152,7 @@ width: 15rem;
    .glass{
       margin-bottom: 25vh;
       height: 65px;
+      flex-direction: column;
    }
    .dashboard{
       flex-direction: column;

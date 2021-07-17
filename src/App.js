@@ -7,7 +7,10 @@ import List from "./components/List";
 
 function App() {
 
-//  ID PARA EL KEY RANDOM
+    let inputNombre = document.getElementsByName('nombre');
+    let inputApellido = document.getElementsByName('apellido');
+    let inputUsuario = document.getElementsByName('usuario');
+    //  ID PARA EL KEY RANDOM
      const createNewTodo = (text) => ({
       completed: false,
       id: nanoid(),
@@ -16,27 +19,49 @@ function App() {
 
   const [listUsuarios, setlistUsuarios] = useState([]);
   const [stateBoton, setstateBoton] = useState(false);
-
-  const buscarUsuario = () => {
-
-  }
+  const [objeto, setObjetos] = useState('');
+  
   const eliminarUsuario = (e) => {
     const lisNew = listUsuarios.filter(a=>a.id!=e.target.id);
     setlistUsuarios(lisNew);
+    setObjetos('');
+    inputNombre[0].value = '';
+    inputApellido[0].value = '';
+    inputUsuario[0].value = ''; 
     
-
   }
   const agregarUsuario = (data) => {
-    data.id = createNewTodo().id;
-    setlistUsuarios([...listUsuarios,data]);
+    if(objeto){
+     
+        const lisNew = listUsuarios.filter(a=>a.id!==objeto.id);
+        data.id = objeto.id;       
+        const prueba = listUsuarios.map(a => (a.id!==objeto.id)?a:data);
+        
+        setlistUsuarios(prueba);
+        setObjetos('');
+        setstateBoton(!stateBoton);
+       
+    }else{
+      data.id = createNewTodo().id;
+     setlistUsuarios([...listUsuarios,data]);
+    }
+    
     
   }
   const editarUsuario = () =>{
 
   }
-  const editarstateBoton = () =>{
-    setstateBoton(!stateBoton);
-  
+  const editarstateBoton = (e) =>{
+       let ob ='';
+       ob = ( listUsuarios.find(a=>a.id === e.target.id));
+       if(ob!=null){
+        setObjetos(ob);      
+        inputNombre[0].value = ob.nombre;
+        inputApellido[0].value = ob.apellido;
+        inputUsuario[0].value = ob.usuario; 
+      }
+       setstateBoton(!stateBoton);
+   
   }
 
   return (
@@ -50,6 +75,7 @@ function App() {
                               agregarUsuario = {agregarUsuario}
                               stateBoton = {stateBoton}
                               editarstateBoton = {editarstateBoton}
+                              objeto = {objeto}
                               />                    
                        
                             <List 
@@ -64,7 +90,7 @@ function App() {
 
         <div className="circle1"></div>
         <div className="circle2"></div>
-
+      
      
     </div>
   );

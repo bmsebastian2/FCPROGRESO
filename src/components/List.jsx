@@ -8,9 +8,7 @@ const List = ({listUsuarios,editarstateBoton,eliminarUsuario}) => {
            <div className="encabezadoList mt-2 rounded py-2 d-flex justify-content-center">             
                <h1 id="h1ListJugadores" className="ms-3">Lista de: <span id="jugadores" className="text-warning" >Jugadores</span></h1>              
            </div>
-          
-
-           
+                     
           
                 {((listUsuarios.length>0))?
                     <Card 
